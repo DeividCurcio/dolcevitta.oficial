@@ -1,0 +1,463 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dolce Vitta Delikatessen: produtos artesanais premium, blog de inspirações e atendimento personalizado no Rio de Janeiro.">
+    <title>Dolce Vitta Delikatessen • Blog &amp; Experiências</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#F9F5EB] text-[#2C2C2C] font-sans">
+
+    <!-- Navbar -->
+    <nav class="bg-white border-b border-[#C9A961]/30 sticky top-0 z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex items-center gap-x-3">
+                    <div class="w-12 h-12 flex items-center justify-center">
+                        <svg width="48" height="48" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="60" cy="60" r="55" fill="#0F4C3A"/>
+                            <circle cx="60" cy="60" r="52" fill="none" stroke="#C9A961" stroke-width="3"/>
+                            <path d="M42 38 L60 82 L78 38" stroke="#C9A961" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M35 55 Q42 48 48 55" stroke="#C9A961" stroke-width="2.5" fill="none"/>
+                            <path d="M85 55 Q78 48 72 55" stroke="#C9A961" stroke-width="2.5" fill="none"/>
+                            <path d="M38 68 Q45 75 52 68" stroke="#C9A961" stroke-width="2" fill="none"/>
+                            <path d="M82 68 Q75 75 68 68" stroke="#C9A961" stroke-width="2" fill="none"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="font-serif text-2xl tracking-[3px] text-[#0F4C3A] font-semibold">DOLCE VITTA</div>
+                        <div class="text-[10px] text-[#C9A961] -mt-1 tracking-[2px]">DELIKATESSEN</div>
+                    </div>
+                </div>
+
+                <div class="hidden md:flex items-center gap-x-9 text-sm font-medium">
+                    <a href="#sobre" class="nav-link hover:text-[#C9A961] transition-colors">Sobre</a>
+                    <a href="#produtos" class="nav-link hover:text-[#C9A961] transition-colors">Produtos</a>
+                    <a href="#blog" class="nav-link hover:text-[#C9A961] transition-colors">Blog</a>
+                    <a href="#contato" class="nav-link hover:text-[#C9A961] transition-colors">Contato</a>
+                </div>
+
+                <div class="hidden md:flex items-center gap-x-4">
+                    <a href="https://wa.me/5522999604947?text=Ol%C3%A1%20Deivid%2C%20vim%20pelo%20site%20da%20Dolce%20Vitta%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20produtos%20ou%20pedidos!" target="_blank" rel="noopener noreferrer"
+                       class="flex items-center gap-x-2 bg-[#0F4C3A] hover:bg-[#0A3D2E] text-white px-5 py-2.5 rounded-full text-sm font-medium transition-all active:scale-[0.985]">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                </div>
+
+                <button id="mobile-menu-btn" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Abrir menu móvel" class="md:hidden w-11 h-11 flex items-center justify-center text-[#0F4C3A] hover:bg-[#0F4C3A]/5 rounded-full transition-colors">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-[#C9A961]/20 px-6 py-6">
+            <div class="flex flex-col gap-y-4 text-sm font-medium">
+                <a href="#sobre" class="mobile-nav-link py-2">Sobre Nós</a>
+                <a href="#produtos" class="mobile-nav-link py-2">Nossos Produtos</a>
+                <a href="#blog" class="mobile-nav-link py-2">Blog &amp; Inspiração</a>
+                <a href="#contato" class="mobile-nav-link py-2">Fale Conosco</a>
+                <div class="pt-4 border-t border-[#C9A961]/20">
+                    <a href="https://wa.me/5522999604947?text=Ol%C3%A1%20Deivid%2C%20vim%20pelo%20site%20da%20Dolce%20Vitta%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20produtos%20ou%20pedidos!" target="_blank"
+                       class="flex items-center justify-center gap-x-2 bg-[#0F4C3A] text-white px-6 py-3 rounded-2xl text-sm font-semibold">
+                        <i class="fab fa-whatsapp mr-2"></i> Conversar no WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main>
+    <!-- Hero Section -->
+    <header class="relative bg-[#0F4C3A] text-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 pt-16 pb-20 md:pt-20 md:pb-24">
+            <div class="grid md:grid-cols-12 gap-10 items-center">
+                <div class="md:col-span-7">
+                    <div class="inline-flex items-center gap-x-2 bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-full text-xs tracking-[2px] mb-6 border border-white/20">
+                        <div class="w-2 h-2 bg-[#C9A961] rounded-full animate-pulse"></div>
+                        <span>NOVA FRIBURGO • RIO DE JANEIRO</span>
+                    </div>
+                    
+                    <h1 class="font-serif text-6xl md:text-7xl leading-[1.05] tracking-tighter mb-6">
+                        Sabores que<br>encantam.<br>
+                        <span class="text-[#C9A961]">Momentos que ficam.</span>
+                    </h1>
+                    
+                    <p class="max-w-md text-lg text-white/80 mb-8">
+                        Produtos artesanais premium, curadoria gourmet e o melhor da delicatessen brasileira para a sua mesa.
+                    </p>
+
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#produtos" class="group inline-flex items-center justify-center gap-x-3 bg-[#C9A961] hover:bg-[#B8974F] active:bg-[#A07E3A] transition-all text-[#0F4C3A] font-semibold px-8 h-14 rounded-2xl text-base shadow-lg shadow-black/20">
+                            Explorar Produtos
+                            <i class="fas fa-arrow-right group-active:translate-x-0.5 transition-transform"></i>
+                        </a>
+                        <a href="#blog" class="inline-flex items-center justify-center gap-x-3 border border-white/40 hover:bg-white/10 transition-all px-8 h-14 rounded-2xl text-base font-medium">
+                            Ler o Blog
+                        </a>
+                    </div>
+                    
+                    <div class="mt-10 flex items-center gap-x-8 text-sm">
+                        <div>
+                            <div class="text-[#C9A961] text-xs tracking-widest">REPRESENTANTE</div>
+                            <div class="font-medium">Deivid Seraphin Bastos Curcio</div>
+                        </div>
+                        <div class="h-3 w-px bg-white/30"></div>
+                        <div class="text-white/70 text-xs leading-tight">
+                            Atendimento personalizado<br>
+                            para todo o Rio de Janeiro
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Visual - Business Card -->
+                <div class="md:col-span-5 relative">
+                    <div class="relative mx-auto max-w-[340px] md:ml-auto">
+                        <div class="absolute -inset-4 bg-[#C9A961]/10 rounded-3xl blur-2xl"></div>
+                        <img src="cartao-de-visita.jpg" alt="Cartão de Visita - Deivid Seraphin Bastos Curcio | Dolce Vitta Delikatessen" loading="lazy" decoding="async"
+                             class="relative w-full rounded-2xl shadow-2xl border border-white/20 object-cover">
+                        <div class="absolute -bottom-3 -right-3 bg-white text-[#0F4C3A] text-xs font-medium px-4 py-1.5 rounded-2xl shadow flex items-center gap-x-2 border border-[#C9A961]/30">
+                            <i class="fas fa-check-circle text-[#C9A961]"></i>
+                            <span class="font-semibold tracking-tight">Representante Oficial</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#C9A961]/40 to-transparent"></div>
+    </header>
+
+    <!-- Sobre Section -->
+    <section id="sobre" class="max-w-7xl mx-auto px-6 pt-16 pb-12">
+        <div class="grid md:grid-cols-2 gap-x-16 gap-y-12 items-center">
+            <!-- Brand Story -->
+            <div>
+                <div class="uppercase tracking-[3px] text-[#C9A961] text-xs font-semibold mb-3">NOSSA ESSÊNCIA</div>
+                <h2 class="font-serif text-5xl leading-none tracking-tighter text-[#0F4C3A] mb-6">Dolce Vitta<br>Delikatessen</h2>
+                
+                <div class="prose prose-stone text-[#444] max-w-prose">
+                    <p class="text-lg">Somos uma delicatessen artesanal dedicada a oferecer produtos de alta qualidade, inspirados na tradição europeia e nos sabores autênticos do Brasil.</p>
+                    <p>Com produção em Nova Friburgo (RJ) e forte presença no Rio de Janeiro, selecionamos e produzimos biscoitos finos, rosquinhas, chips gourmet e doces clássicos como o bem casado — tudo com ingredientes nobres e processos artesanais.</p>
+                </div>
+
+                <div class="mt-8 flex flex-wrap gap-3">
+                    <div class="flex items-center gap-x-2 text-sm bg-white border border-[#C9A961]/30 px-4 h-9 rounded-2xl">
+                        <i class="fas fa-leaf text-[#C9A961]"></i>
+                        <span class="font-medium">100% Artesanal</span>
+                    </div>
+                    <div class="flex items-center gap-x-2 text-sm bg-white border border-[#C9A961]/30 px-4 h-9 rounded-2xl">
+                        <i class="fas fa-award text-[#C9A961]"></i>
+                        <span class="font-medium">Ingredientes Premium</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Deivid Card -->
+            <div class="bg-white border border-[#C9A961]/20 rounded-3xl p-8 md:p-9 shadow-sm">
+                <div class="flex items-start gap-x-5">
+                    <div class="shrink-0">
+                        <div class="w-16 h-16 rounded-2xl overflow-hidden border-2 border-[#C9A961]/60">
+                            <img src="cartao-de-visita.jpg" alt="Deivid Seraphin" loading="lazy" decoding="async" class="w-full h-full object-cover scale-[1.8] origin-top">
+                        </div>
+                    </div>
+                    <div class="flex-1 min-w-0 pt-1">
+                        <div class="font-semibold text-2xl tracking-tight">Deivid Seraphin<br>Bastos Curcio</div>
+                        <div class="text-[#C9A961] font-medium mt-0.5">Representante Comercial</div>
+                        
+                        <div class="mt-5 text-sm leading-relaxed text-[#555]">
+                            Apaixonado por conectar pessoas aos melhores sabores. 
+                            Atendo clientes em toda a região metropolitana do Rio de Janeiro com 
+                            atendimento personalizado e curadoria exclusiva.
+                        </div>
+
+                        <div class="mt-6 flex flex-wrap gap-x-2 gap-y-1 text-xs">
+                            <a href="https://www.instagram.com/deivid_curcio?igsh=bWw2Ync2NTJjMHNl" target="_blank" rel="noopener noreferrer" 
+                               class="inline-flex items-center gap-x-1.5 bg-[#0F4C3A] text-white px-3.5 py-1 rounded-full hover:bg-black transition-colors">
+                                <i class="fab fa-instagram text-xs"></i> 
+                                <span>@deivid_curcio</span>
+                            </a>
+                            <a href="https://www.linkedin.com/search/results/all/?keywords=Deivid%20Seraphin%20Bastos%20Curcio" target="_blank" rel="noreferrer noopener"
+                               class="inline-flex items-center gap-x-1.5 border border-[#0F4C3A]/70 text-[#0F4C3A] px-3.5 py-1 rounded-full hover:bg-[#0F4C3A]/5 transition-colors">
+                                <i class="fab fa-linkedin-in text-xs"></i> 
+                                <span>LinkedIn</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-px bg-[#C9A961]/20 rounded-3xl overflow-hidden">
+            <div class="bg-white p-6 text-center">
+                <div class="font-serif text-4xl text-[#0F4C3A]">+350</div>
+                <div class="text-xs tracking-widest text-[#666] mt-1">CLIENTES ATENDIDOS</div>
+            </div>
+            <div class="bg-white p-6 text-center">
+                <div class="font-serif text-4xl text-[#0F4C3A]">12</div>
+                <div class="text-xs tracking-widest text-[#666] mt-1">PRODUTOS EXCLUSIVOS</div>
+            </div>
+            <div class="bg-white p-6 text-center">
+                <div class="font-serif text-4xl text-[#0F4C3A]">Nova Friburgo</div>
+                <div class="text-xs tracking-widest text-[#666] mt-1">PRODUÇÃO ARTESANAL</div>
+            </div>
+            <div class="bg-white p-6 text-center">
+                <div class="font-serif text-4xl text-[#0F4C3A]">100%</div>
+                <div class="text-xs tracking-widest text-[#666] mt-1">SATISFAÇÃO GARANTIDA</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Produtos Section -->
+    <section id="produtos" class="max-w-7xl mx-auto px-6 pt-16 pb-12">
+        <div class="flex items-end justify-between mb-8">
+            <div>
+                <div class="text-[#C9A961] text-xs tracking-[3px] font-semibold">CURADORIA EXCLUSIVA</div>
+                <h3 class="font-serif text-5xl tracking-tighter text-[#0F4C3A]">Nossos Produtos</h3>
+            </div>
+                        <a href="https://www.instagram.com/dolcevitta.oficial" target="_blank" rel="noopener noreferrer" class="hidden md:inline-flex items-center text-sm font-medium text-[#0F4C3A] hover:text-[#C9A961] transition-colors">
+                Ver tudo no Instagram <i class="fas fa-arrow-up-right-from-square ml-2 text-xs"></i>
+            </a>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Produto 1 -->
+            <div class="group bg-white rounded-3xl overflow-hidden border border-[#C9A961]/10 hover:border-[#C9A961]/40 transition-all duration-300 flex flex-col">
+                <div class="h-56 bg-[#F4EDE0] relative overflow-hidden flex items-center justify-center">
+                    <img src="https://th.bing.com/th/id/OIP.z5_ME-1YAWpsp5Ed0NGqjAHaKL?w=145&h=200&c=7&r=0&o=7&pid=1.7&rm=3" alt="Rosquinha Santa Clara Dolce Vitta" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute top-4 right-4 bg-white/90 text-[#0F4C3A] text-[10px] font-bold px-3 py-1 rounded-full tracking-wider">80g</div>
+                </div>
+                <div class="p-6 flex-1 flex flex-col">
+                    <div>
+                        <div class="font-semibold text-xl tracking-tight">Rosquinha Santa Clara</div>
+                        <div class="text-sm text-[#666] mt-0.5">Clássico crocante com toque artesanal</div>
+                    </div>
+                    <div class="mt-auto pt-5 flex items-center justify-between">
+                        <div><span class="font-serif text-2xl text-[#0F4C3A]">R$ 14,90</span></div>
+                        <button type="button" onclick="addToCart('Rosquinha Santa Clara', 14.90)" class="text-xs font-semibold bg-[#0F4C3A] hover:bg-black active:bg-[#0A3D2E] text-white px-5 h-9 rounded-2xl flex items-center gap-x-2 transition-all">
+                            <i class="fas fa-shopping-bag text-xs"></i>
+                            <span>ADICIONAR</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produto 2 -->
+            <div class="group bg-white rounded-3xl overflow-hidden border border-[#C9A961]/10 hover:border-[#C9A961]/40 transition-all duration-300 flex flex-col">
+                <div class="h-56 bg-[#F4EDE0] relative overflow-hidden flex items-center justify-center">
+                    <img src="https://th.bing.com/th/id/OSK.61dd9f97b4ac786f85c464ec98992208?w=424&h=424&c=7&rs=1&qlt=90&o=6&pid=16.1" alt="Biscoito de Churros Dolce Vitta" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute top-4 right-4 bg-white/90 text-[#0F4C3A] text-[10px] font-bold px-3 py-1 rounded-full tracking-wider">200g</div>
+                </div>
+                <div class="p-6 flex-1 flex flex-col">
+                    <div>
+                        <div class="font-semibold text-xl tracking-tight">Biscoito de Churros</div>
+                        <div class="text-sm text-[#666] mt-0.5">Canela, açúcar e muito sabor</div>
+                    </div>
+                    <div class="mt-auto pt-5 flex items-center justify-between">
+                        <div><span class="font-serif text-2xl text-[#0F4C3A]">R$ 18,50</span></div>
+                        <button type="button" onclick="addToCart('Biscoito de Churros', 18.50)" class="text-xs font-semibold bg-[#0F4C3A] hover:bg-black active:bg-[#0A3D2E] text-white px-5 h-9 rounded-2xl flex items-center gap-x-2 transition-all">
+                            <i class="fas fa-shopping-bag text-xs"></i>
+                            <span>ADICIONAR</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produto 3 -->
+            <div class="group bg-white rounded-3xl overflow-hidden border border-[#C9A961]/10 hover:border-[#C9A961]/40 transition-all duration-300 flex flex-col">
+                <div class="h-56 bg-[#F4EDE0] relative overflow-hidden flex items-center justify-center">
+                    <img src="https://img.freepik.com/fotos-gratis/batatas-fritas-deliciosas-e-crocantes_658428-119.jpg?semt=ais_hybrid&w=740&q=80" alt="Chips de Queijo Dolce Vitta" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute top-4 right-4 bg-white/90 text-[#0F4C3A] text-[10px] font-bold px-3 py-1 rounded-full tracking-wider">100g</div>
+                </div>
+                <div class="p-6 flex-1 flex flex-col">
+                    <div>
+                        <div class="font-semibold text-xl tracking-tight">Chips de Queijo</div>
+                        <div class="text-sm text-[#666] mt-0.5">Aperitivo sofisticado e viciante</div>
+                    </div>
+                    <div class="mt-auto pt-5 flex items-center justify-between">
+                        <div><span class="font-serif text-2xl text-[#0F4C3A]">R$ 16,90</span></div>
+                        <button type="button" onclick="addToCart('Chips de Queijo', 16.90)" class="text-xs font-semibold bg-[#0F4C3A] hover:bg-black active:bg-[#0A3D2E] text-white px-5 h-9 rounded-2xl flex items-center gap-x-2 transition-all">
+                            <i class="fas fa-shopping-bag text-xs"></i>
+                            <span>ADICIONAR</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produto 4 -->
+            <div class="group bg-white rounded-3xl overflow-hidden border border-[#C9A961]/10 hover:border-[#C9A961]/40 transition-all duration-300 flex flex-col">
+                <div class="h-56 bg-[#F4EDE0] relative overflow-hidden flex items-center justify-center">
+                    <img src="https://s2-receitas.glbimg.com/VSw2s4BvbZQX9aOL242ec7BdbjI=/0x0:1200x675/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_1f540e0b94d8437dbbc39d567a1dee68/internal_photos/bs/2024/n/S/kbTDgrTNW2wA0cNWGrnQ/bem-casado-de-doce-de-leite-diferente.jpg" alt="Bem Casado Doce de Leite Dolce Vitta" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute top-4 right-4 bg-white/90 text-[#0F4C3A] text-[10px] font-bold px-3 py-1 rounded-full tracking-wider">200g</div>
+                </div>
+                <div class="p-6 flex-1 flex flex-col">
+                    <div>
+                        <div class="font-semibold text-xl tracking-tight">Bem Casado Doce de Leite</div>
+                        <div class="text-sm text-[#666] mt-0.5">O clássico brasileiro em versão premium</div>
+                    </div>
+                    <div class="mt-auto pt-5 flex items-center justify-between">
+                        <div><span class="font-serif text-2xl text-[#0F4C3A]">R$ 22,00</span></div>
+                        <button type="button" onclick="addToCart('Bem Casado Doce de Leite', 22.00)" class="text-xs font-semibold bg-[#0F4C3A] hover:bg-black active:bg-[#0A3D2E] text-white px-5 h-9 rounded-2xl flex items-center gap-x-2 transition-all">
+                            <i class="fas fa-shopping-bag text-xs"></i>
+                            <span>ADICIONAR</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-8">
+            <p class="text-sm text-[#666]">Entregamos em toda Zona Sul, Tijuca e bairros adjacentes do Rio de Janeiro • Pedidos personalizados para eventos</p>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="bg-white border-y border-[#C9A961]/20 py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex items-end justify-between mb-9">
+                <div>
+                    <div class="text-[#C9A961] text-xs tracking-[3px] font-semibold">INSPIRAÇÃO &amp; CONHECIMENTO</div>
+                    <h3 id="blog-heading" class="font-serif text-5xl tracking-tighter text-[#0F4C3A]">Blog Dolce Vitta</h3>
+                </div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6" id="blog-grid" aria-labelledby="blog-heading">
+                <!-- Preenchido via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato Section -->
+    <section id="contato" class="max-w-7xl mx-auto px-6 py-16">
+        <div class="grid md:grid-cols-12 gap-x-12 gap-y-12">
+            <div class="md:col-span-5">
+                <div class="sticky top-24">
+                    <div class="text-[#C9A961] text-xs tracking-[3px] font-semibold mb-2">FALE DIRETO COM O REPRESENTANTE</div>
+                    <h3 class="font-serif text-5xl tracking-tighter leading-none text-[#0F4C3A] mb-8">Vamos conversar<br>sobre sabores?</h3>
+                    
+                    <div class="space-y-6 text-sm">
+                        <div class="flex gap-x-4">
+                            <div class="w-9 h-9 flex-shrink-0 rounded-2xl bg-[#0F4C3A] text-white flex items-center justify-center">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-[#888]">WHATSAPP / TELEFONE</div>
+                                <a href="https://wa.me/5522999604947?text=Ol%C3%A1%20Deivid%2C%20vim%20pelo%20site%20da%20Dolce%20Vitta%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20produtos%20ou%20pedidos!" target="_blank" rel="noopener noreferrer" class="font-semibold text-lg tracking-tight hover:text-[#C9A961] transition-colors">(22) 99960-4947</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-x-4">
+                            <div class="w-9 h-9 flex-shrink-0 rounded-2xl bg-[#0F4C3A] text-white flex items-center justify-center">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-[#888]">INSTAGRAM OFICIAL</div>
+                                <a href="https://www.instagram.com/dolcevitta.oficial" target="_blank" rel="noopener noreferrer" class="font-semibold hover:text-[#C9A961] transition-colors">@dolcevitta.oficial</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-x-4">
+                            <div class="w-9 h-9 flex-shrink-0 rounded-2xl bg-[#0F4C3A] text-white flex items-center justify-center">
+                                <i class="fab fa-linkedin-in"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-[#888]">LINKEDIN</div>
+                                <a href="https://www.linkedin.com/search/results/all/?keywords=Deivid%20Seraphin%20Bastos%20Curcio" target="_blank" rel="noopener noreferrer" class="font-semibold hover:text-[#C9A961] transition-colors">Deivid Curcio</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formulário de Contato -->
+            <div class="md:col-span-7">
+                <div class="bg-white border border-[#C9A961]/20 rounded-3xl p-8 md:p-10">
+                    <form id="contact-form" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="text-xs tracking-widest text-[#666] block mb-1.5" for="name">SEU NOME</label>
+                                <input type="text" id="name" name="name" required class="w-full border border-[#C9A961]/40 focus:border-[#C9A961] rounded-2xl px-5 h-12 text-sm outline-none transition-all">
+                            </div>
+                            <div>
+                                <label class="text-xs tracking-widest text-[#666] block mb-1.5" for="email">SEU E-MAIL</label>
+                                <input type="email" id="email" name="email" required class="w-full border border-[#C9A961]/40 focus:border-[#C9A961] rounded-2xl px-5 h-12 text-sm outline-none transition-all">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="text-xs tracking-widest text-[#666] block mb-1.5" for="message">MENSAGEM / PEDIDO</label>
+                            <textarea id="message" name="message" rows="4" required placeholder="Olá Deivid, gostaria de informações sobre..." class="w-full border border-[#C9A961]/40 focus:border-[#C9A961] rounded-3xl px-5 py-4 text-sm outline-none resize-y transition-all"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-[#0F4C3A] hover:bg-black active:bg-[#0A3D2E] transition-all text-white h-14 rounded-2xl font-semibold flex items-center justify-center gap-x-3 text-sm tracking-wider">
+                            ENVIAR MENSAGEM PARA DEIVID
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#0F4C3A] text-white/70 text-xs">
+        <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center gap-y-4 text-center md:text-left">
+            <div>© 2026 Dolce Vitta Delikatessen. Todos os direitos reservados.</div>
+            <div class="flex items-center gap-x-5">
+                <span>Feito com carinho no Rio de Janeiro</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot -->
+    <button id="chatbot-button" type="button" aria-controls="chatbot-window" aria-expanded="false" onclick="toggleChatbot()" class="fixed bottom-6 right-24 z-[95] flex items-center justify-center w-14 h-14 bg-[#0F4C3A] hover:bg-[#0A3D2E] text-white rounded-full shadow-2xl cursor-pointer transition-all hover:scale-110 active:scale-95 border-2 border-[#C9A961]/50" aria-label="Abrir chat de atendimento">
+        <i class="fas fa-comments text-2xl"></i>
+    </button>
+
+    <div id="chatbot-window" class="hidden fixed bottom-24 right-6 z-[100] w-[340px] bg-white rounded-3xl shadow-2xl border border-[#C9A961]/20 flex flex-col overflow-hidden" style="height: 480px; max-height: 70vh;" aria-hidden="true">
+        <div class="bg-[#0F4C3A] text-white px-5 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-x-3">
+                <div class="w-9 h-9 rounded-full bg-[#C9A961] flex items-center justify-center">
+                    <i class="fas fa-robot text-[#0F4C3A]"></i>
+                </div>
+                <div>
+                    <div class="font-semibold tracking-tight">Atendimento Dolce Vitta</div>
+                    <div class="flex items-center gap-x-1.5 text-xs text-[#C9A961]">
+                        <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+                        <span>Online agora</span>
+                    </div>
+                </div>
+            </div>
+            <button type="button" onclick="toggleChatbot()" class="text-white/70 hover:text-white text-xl leading-none w-8 h-8 flex items-center justify-center" aria-label="Fechar chat">&times;</button>
+        </div>
+
+        <div id="chat-messages" class="flex-1 p-4 overflow-y-auto bg-[#F9F5EB] space-y-3 text-sm"></div>
+
+        <div id="quick-replies" class="px-4 py-3 border-t bg-white flex flex-wrap gap-2"></div>
+
+        <div class="border-t bg-white p-3 flex gap-2">
+            <input id="chat-input" type="text" placeholder="Digite sua mensagem..." class="flex-1 border border-[#C9A961]/40 focus:border-[#C9A961] rounded-2xl px-4 py-2 text-sm outline-none" onkeypress="if(event.key === 'Enter') sendChatMessage()">
+            <button onclick="sendChatMessage()" class="bg-[#0F4C3A] hover:bg-black text-white w-10 h-10 rounded-2xl flex items-center justify-center transition-all">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/5522999604947?text=Ol%C3%A1%20Deivid%2C%20vim%20pelo%20site%20da%20Dolce%20Vitta%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20produtos%20ou%20pedidos!" target="_blank" rel="noreferrer noopener" class="fixed bottom-6 right-6 z-[90] flex items-center justify-center w-14 h-14 bg-[#25D366] hover:bg-[#128C7E] text-white rounded-full shadow-2xl transition-all hover:scale-110 active:scale-95" aria-label="Falar com Deivid no WhatsApp">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+
+    <div id="toast" class="hidden" role="status" aria-live="polite"></div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,295 @@
+/* ============================================= */
+/*           DOLCE VITTA DELIKATESSEN            */
+/*              Estilos Personalizados           */
+/* ============================================= */
+
+:root {
+    --green: #0F4C3A;
+    --gold: #C9A961;
+    --cream: #F9F5EB;
+}
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: var(--cream);
+    color: #2C2C2C;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Navbar com efeito de scroll */
+#navbar.scrolled {
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+    background-color: rgba(255,255,255,0.96);
+    backdrop-filter: blur(12px);
+}
+
+/* Links da navegação com underline animado */
+.nav-link {
+    position: relative;
+}
+
+.nav-link:after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1.5px;
+    background-color: #C9A961;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover:after {
+    width: 100%;
+}
+
+/* Links do menu mobile */
+.mobile-nav-link {
+    color: #2C2C2C;
+    transition: all 0.2s ease;
+}
+
+.mobile-nav-link:hover {
+    color: #C9A961;
+    padding-left: 4px;
+}
+
+/* Cards de produtos com efeito de elevação */
+.group {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                box-shadow 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.group:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.05), 0 8px 10px -6px rgb(0 0 0 / 0.05);
+}
+
+/* Cards do Blog */
+.blog-card {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+.blog-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.15);
+}
+
+.blog-card:hover .blog-image {
+    transform: scale(1.08);
+}
+
+/* Modal do Blog */
+#blog-modal {
+    animation: fadeInModal 0.2s ease forwards;
+}
+
+@keyframes fadeInModal {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Inputs e Textareas */
+input, textarea {
+    transition: all 0.2s ease;
+}
+
+input:focus, textarea:focus {
+    box-shadow: 0 0 0 3px rgba(201, 169, 97, 0.1);
+}
+
+/* Tipografia elegante */
+.font-serif {
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+}
+
+/* Fonte Playfair Display */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Inter:wght@400;500;600&amp;display=swap');
+
+body {
+    font-family: 'Inter', system_ui, sans-serif;
+}
+
+/* Toast notification */
+#toast {
+    animation: slideUpToast 0.3s cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+@keyframes slideUpToast {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Efeito nas imagens dos produtos */
+.group img {
+    transition: transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1), 
+                filter 0.4s ease;
+}
+
+.group:hover img {
+    filter: saturate(1.1) contrast(1.02);
+}
+
+/* Botão flutuante do WhatsApp com pulso */
+a[aria-label="Falar com Deivid no WhatsApp"] {
+    animation: whatsappPulse 2s infinite ease-in-out;
+}
+
+@keyframes whatsappPulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); }
+    70% { box-shadow: 0 0 0 12px rgba(37, 211, 102, 0); }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Scroll margin para seções */
+section {
+    scroll-margin-top: 80px;
+}
+
+#toast {
+    display: none;
+    position: fixed;
+    right: 1.5rem;
+    bottom: 4.5rem;
+    z-index: 110;
+    padding: 0.9rem 1.2rem;
+    border-radius: 1.25rem;
+    background-color: #0F4C3A;
+    color: white;
+    font-size: 0.95rem;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
+    align-items: center;
+    justify-content: center;
+    min-width: 220px;
+}
+
+#toast.show {
+    display: flex;
+}
+
+/* Botões com efeito de clique */
+button:active {
+    transform: scale(0.985);
+}
+
+/* ============================================= */
+/*                CHATBOT STYLES                 */
+/* ============================================= */
+
+#chat-messages {
+    scrollbar-width: thin;
+    scrollbar-color: #C9A961 #F9F5EB;
+}
+
+#chat-messages::-webkit-scrollbar {
+    width: 5px;
+}
+
+#chat-messages::-webkit-scrollbar-thumb {
+    background-color: #C9A961;
+    border-radius: 20px;
+}
+
+.chat-bubble {
+    max-width: 80%;
+    padding: 10px 14px;
+    border-radius: 18px;
+    line-height: 1.4;
+    animation: fadeInMessage 0.2s ease;
+}
+
+@keyframes fadeInMessage {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.chat-bubble.bot {
+    background-color: white;
+    border: 1px solid #C9A961/30;
+    border-bottom-left-radius: 4px;
+    color: #2C2C2C;
+}
+
+.chat-bubble.user {
+    background-color: #0F4C3A;
+    color: white;
+    margin-left: auto;
+    border-bottom-right-radius: 4px;
+}
+
+.quick-reply-btn {
+    background-color: #F9F5EB;
+    border: 1px solid #C9A961/40;
+    color: #0F4C3A;
+    font-size: 12px;
+    padding: 6px 14px;
+    border-radius: 9999px;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.quick-reply-btn:hover {
+    background-color: #0F4C3A;
+    color: white;
+    border-color: #0F4C3A;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .font-serif {
+        font-size: 2.25rem;
+        line-height: 1.05;
+    }
+
+    .sticky {
+        position: static;
+        top: auto;
+    }
+
+    #chatbot-window {
+        width: min(95vw, 340px);
+        right: 1rem;
+        bottom: 5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #chatbot-window {
+        width: calc(100vw - 1.5rem);
+        right: 0.75rem;
+        bottom: 4.5rem;
+    }
+
+    #chatbot-button {
+        right: 5.5rem;
+    }
+}
+
